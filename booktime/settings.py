@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'booktime.wsgi.application'
 # }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'booktime',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE'  : 'django.db.backends.postgresql',
+        'NAME'    : 'booktime',
+        'USER'    : 'postgres',
+        'PASSWORD': 'tejas_sangam',
+        'HOST'    : '127.0.0.1',
+        'PORT'    : '5432',
     }
 }
 
