@@ -85,11 +85,23 @@ DATABASES = {
         'ENGINE'  : 'django.db.backends.postgresql',
         'NAME'    : 'booktime',
         'USER'    : 'postgres',
-        'PASSWORD': 'postgres',
+        'PASSWORD': 'tejas_sangam',
         'HOST'    : '127.0.0.1',
         'PORT'    : '5432',
     }
 }
+
+if not DEBUG:
+    EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST_USER = "username"
+    EMAIL_HOST = 'smtp.domain.com'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_PASSWORD = "password"
+else:
+    EMAIL_BACKEND = (
+    "django.core.mail.backends.console.EmailBackend"
+    )
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
